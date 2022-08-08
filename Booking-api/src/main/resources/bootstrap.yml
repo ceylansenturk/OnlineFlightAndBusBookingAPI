@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Booking-api
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefixes: config
+        defaultContext: application
+        profileSerparator: '::'
+        format: YAML

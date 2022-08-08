@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "c67a3b06-7e1e-4715-a23e-d44f6d088dfc",
+		"name": "bookingapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21634935"
+	},
+	"item": [
+		{
+			"name": "admin-voyage",
+			"item": [
+				{
+					"name": "add admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ceylan\",\r\n    \"surname\":\"Şentürk\",\r\n    \"company\":\"Turkish Airlines\",\r\n    \"email\":\"ceysenturk@gmail.com\",\r\n    \"password\":\"123456789\",\r\n    \"phone\":\"5305610181\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/admins/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"admins",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ceysenturk@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/admins/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ceyda\",\r\n    \"password\":\"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/admins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-getall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-getid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/admins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addvoyage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transportType\": \"BUS\",\r\n    \"firmName\":\"KAMIL KOÇ\",\r\n    \"sourceCity\":\"RİZE\",\r\n    \"destinationCity\":\"KARS\",\r\n    \"voyageDate\": \"2022-11-13\",\r\n    \"voyageTime\": \"12:00\",\r\n    \"fare\": 185.0,\r\n    \"seatCount\":45\r\n\r\n\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/voyage/addVoyage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"addVoyage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voyage-getall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3435/voyage/allVoyage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"allVoyage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voyage-getid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3435/voyage/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voyage-search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3435/voyage/RİZE/KARS/22-11-13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"RİZE",
+								"KARS",
+								"22-11-13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voyag-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3435/voyage/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voyage-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3435/voyage/deleteVoyage/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3435",
+							"path": [
+								"voyage",
+								"deleteVoyage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-booking",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ceylan\",\r\n    \"surname\":\"Şentürk\",\r\n    \"email\":\"ceylan@gmail.com\",\r\n    \"password\":\"1997\",\r\n    \"phone\":\"05332543356\",\r\n    \"userType\":\"INDIVIDUAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3436/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users-login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"email\":\"ceylan@gmail.com\",\r\n    \"password\":\"1997\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3436/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-changeName",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Asya\",\r\n    \"password\":\"12345\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3436/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users-getall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3436/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users-findbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3436/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passengerList\": [\r\n        {\r\n            \"passengerId\": 0,\r\n            \"passengerName\": \"Emine Taban\",\r\n            \"passengerAge\": \"20\",\r\n            \"passengerGender\": \"Female\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3436/booking/2/1/thy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"booking",
+								"2",
+								"1",
+								"thy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-getuserid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3436/ticket/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"ticket",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "totalfare",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3436/ticket/totalfare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3436",
+							"path": [
+								"ticket",
+								"totalfare"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
