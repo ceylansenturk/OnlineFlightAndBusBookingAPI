@@ -58,19 +58,19 @@ public class TicketServiceImpl implements TicketService {
     }
 
 
-   @Override
-   public double showTotalFare(){
-       double result= 0;
-       List<TicketDTO> ticketDTOList= new ArrayList<>();
-       for(TicketDTO tickets : getTicketList())  {
-           ticketDTOList.add(tickets);
+//    @Override
+//    public double showTotalFare(){
+//        double result= 0;
+//        List<TicketDTO> ticketDTOList= new ArrayList<>();
+//        for(TicketDTO tickets : getTicketList())  {
+//            ticketDTOList.add(tickets);
 
-       }
-       for (int i=0; i<getTicketList().size();i++) {
-          result += ticketDTOList.get(i).getTotalfare();
-       }
-       log.info("Result");
-       return result;
-   }
+//        }
+//        for (int i=0; i<getTicketList().size();i++) {
+//           result += ticketDTOList.get(i).getTotalfare();
+//        }
+//        log.info("Result");
+//        return result;
+//    }
 
 }
