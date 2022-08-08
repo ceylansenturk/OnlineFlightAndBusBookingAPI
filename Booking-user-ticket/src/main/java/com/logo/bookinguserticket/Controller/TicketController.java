@@ -25,9 +25,9 @@ public class TicketController {
                                                       HttpServletResponse response) {
         List<TicketDTO> availableTickets = ticketService.viewTicket(userId);
         return new ResponseEntity<List<TicketDTO>>(availableTickets, HttpStatus.OK); }
-//    @GetMapping("/totalfare")
-//    public double showTotalFare(){
-//        return ticketService.showTotalFare();
-//    }
+   @GetMapping("/totalfare")
+   public double showTotalFare(){
+       return ticketService.showTotalFare();
+   }
 
 }
