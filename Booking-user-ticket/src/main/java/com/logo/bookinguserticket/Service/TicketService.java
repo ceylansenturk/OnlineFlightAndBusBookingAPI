@@ -10,6 +10,6 @@ public interface TicketService {
     public List<TicketDTO> viewTicket(String userId) throws RecordNotFoundException;
 
 //    public Integer getTotalFare() throws RecordNotFoundException;
-//    public double showTotalFare();
+   public double showTotalFare();
 
 }
