@@ -9,7 +9,6 @@ Online uçak ve otobüs bilet satış uygulaması ve ylculuk seferlerinin sistem
 - Spring Boot
 - PostgreSQL
 - RabbitMQ
-- JUnit
 - Postman
 - Docker
 - Intellij IDEA
